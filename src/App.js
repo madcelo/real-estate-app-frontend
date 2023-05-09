@@ -18,6 +18,7 @@ function App() {
           <Route path="/real-estates/:id" element={<EstatesDetails />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </main>
       <Footer />

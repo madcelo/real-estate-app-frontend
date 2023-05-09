@@ -220,3 +220,151 @@ code {
 .additional-info {
   margin-top: 2rem;
 }
+
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  color: #4a4a4a;
+}
+
+.contact-form-container {
+  background-color: #36454f;
+  padding: 2rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+.contact-form-container label {
+  display: block;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #4a4a4a;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+  background-color: #dcdcdc;
+}
+
+.contact-form-container textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form-container button {
+  background-color: #4caf50;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form-container button:hover {
+  background-color: #3c9a48;
+}
+
+.contact-info {
+  text-align: center;
+  line-height: 1.6;
+}
+
+.contact-info h2 {
+  color: #36454f;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  color: #4a4a4a;
+}
+
+/* src/pages/AdminPage.css */
+.admin-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.admin-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.admin-page-header h1 {
+  color: #36454f;
+  margin: 0;
+}
+
+.register-btn {
+  background-color: #4caf50;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #3c9a48;
+}
+
+.real-estate-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.real-estate-register-form {
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  padding: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.real-estate-register-form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #36454f;
+}
+
+.real-estate-register-form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.real-estate-register-form button[type="submit"] {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.real-estate-register-form button[type="submit"]:hover {
+  background-color: #3d8a40;
+}
