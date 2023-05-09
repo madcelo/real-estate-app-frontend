@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../../api/api";
 import RealEstateCard from "../components/RealEstateCard";
 import RealEstateRegisterForm from "../components/RealEstateRegisterForm";
 import { Link } from "react-router-dom";
@@ -11,7 +11,7 @@ const AdminPage = () => {
   useEffect(() => {
     const fetchRealEstates = async () => {
       try {
-        const response = await axios.get("/api/real-estates", {
+        const response = await api.get("/api/real-estates", {
           headers: {
             Authorization: `Bearer ${authToken}`,
           },
@@ -27,7 +27,7 @@ const AdminPage = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/api/real-estates/${id}`, {
+      await api.delete(`/api/real-estates/${id}`, {
         headers: {
           Authorization: `Bearer ${authToken}`,
         },

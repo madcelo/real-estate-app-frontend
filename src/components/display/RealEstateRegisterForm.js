@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import api from "../../api/api";
 
 const RealEstateRegisterForm = ({ onRegister }) => {
   const [formData, setFormData] = useState({
@@ -22,7 +22,7 @@ const RealEstateRegisterForm = ({ onRegister }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("/api/real-estates", formData);
+      const response = await api.post("/api/real-estates", formData);
       onRegister(response.data);
     } catch (error) {
       console.error("Error registering real estate:", error);

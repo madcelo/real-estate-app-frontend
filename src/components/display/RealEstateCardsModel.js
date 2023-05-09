@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import api from "../../api/api";
 import { Link } from "react-router-dom";
 
 const RealEstateCardsModel = ({ realEstate, isAdmin, onDelete }) => {
@@ -9,7 +9,7 @@ const RealEstateCardsModel = ({ realEstate, isAdmin, onDelete }) => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`/api/real-estates/${realEstate._id}`, realEstate, {
+      await api.put(`/api/real-estates/${realEstate._id}`, realEstate, {
         headers: {
           Authorization: `Bearer ${authToken}`,
         },

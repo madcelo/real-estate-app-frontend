@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import api from '../../api/api';
 import RealEstateCardsModel from '../display/RealEstateCardsModel';
 
 const RealEstatesList = ({ isHomePage }) => {
@@ -8,7 +8,7 @@ const RealEstatesList = ({ isHomePage }) => {
 
   useEffect(() => {
     const fetchRealEstates = async () => {
-      const response = await axios.get('/api/real-estates');
+      const response = await api.get('/api/real-estates');
       setRealEstates(response.data);
     };
 
