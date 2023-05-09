@@ -28,7 +28,7 @@ const RealEstatesList = ({ isHomePage }) => {
       <h2>Last Estates Added</h2>
       <div className="cards-container">
         {realEstates.slice(0, viewCount).map((realEstate) => (
-          <RealEstateCardsModel key={realEstate.id} realEstate={realEstate} />
+          <RealEstateCardsModel key={realEstate._id} realEstate={realEstate} />
         ))}
       </div>
       {isHomePage && (
