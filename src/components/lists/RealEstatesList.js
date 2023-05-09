@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import api from '../../api/api';
-import RealEstateCardsModel from '../display/RealEstateCardsModel';
+import React, { useEffect, useState } from "react";
+import api from "../../api/api";
+import RealEstateCardsModel from "../display/RealEstateCardsModel";
 
 const RealEstatesList = ({ isHomePage }) => {
   const [realEstates, setRealEstates] = useState([]);
@@ -8,7 +8,7 @@ const RealEstatesList = ({ isHomePage }) => {
 
   useEffect(() => {
     const fetchRealEstates = async () => {
-      const response = await api.get('/api/real-estates');
+      const response = await api.get(`/real-estates/${id}`);
       setRealEstates(response.data);
     };
 
@@ -33,7 +33,9 @@ const RealEstatesList = ({ isHomePage }) => {
       </div>
       {isHomePage && (
         <button onClick={handleViewMore}>
-          {viewCount === 3 || viewCount === 6 ? 'View More' : 'See all Real Estates'}
+          {viewCount === 3 || viewCount === 6
+            ? "View More"
+            : "See all Real Estates"}
         </button>
       )}
     </div>
