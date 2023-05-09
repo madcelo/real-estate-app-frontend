@@ -8,7 +8,7 @@ const RealEstatesList = ({ isHomePage }) => {
 
   useEffect(() => {
     const fetchRealEstates = async () => {
-      const response = await api.get(`/real-estates/${_id}`);
+      const response = await api.get("/real-estates");
       setRealEstates(response.data);
     };
 
@@ -28,6 +28,7 @@ const RealEstatesList = ({ isHomePage }) => {
       <h2>Last Estates Added</h2>
       <div className="cards-container">
         {realEstates.slice(0, viewCount).map((realEstate) => (
+          // eslint-disable-next-line no-undef
           <RealEstateCardsModel key={realEstate._id} realEstate={realEstate} />
         ))}
       </div>
