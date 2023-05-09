@@ -8,7 +8,7 @@ const RealEstatesList = ({ isHomePage }) => {
 
   useEffect(() => {
     const fetchRealEstates = async () => {
-      const response = await api.get(`/real-estates/${id}`);
+      const response = await api.get(`/real-estates/${_id}`);
       setRealEstates(response.data);
     };
 
