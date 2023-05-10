@@ -9,7 +9,7 @@ const RealEstateCardsModel = ({ realEstate, isAdmin, onDelete }) => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      await api.put(`/api/real-estates/${realEstate._id}`, realEstate, {
+      await api.put(`/real-estates/${realEstate._id}`, realEstate, {
         headers: {
           Authorization: `Bearer ${authToken}`,
         },

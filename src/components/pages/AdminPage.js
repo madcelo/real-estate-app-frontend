@@ -11,7 +11,7 @@ const AdminPage = () => {
   useEffect(() => {
     const fetchRealEstates = async () => {
       try {
-        const response = await api.get("/api/real-estates", {
+        const response = await api.get("/real-estates", {
           headers: {
             Authorization: `Bearer ${authToken}`,
           },
@@ -27,7 +27,7 @@ const AdminPage = () => {
 
   const handleDelete = async (id) => {
     try {
-      await api.delete(`/api/real-estates/${id}`, {
+      await api.delete(`/real-estates/${id}`, {
         headers: {
           Authorization: `Bearer ${authToken}`,
         },

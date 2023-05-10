@@ -22,7 +22,7 @@ const RealEstateRegisterForm = ({ onRegister }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await api.post("/api/real-estates", formData);
+      const response = await api.post("/real-estates", formData);
       onRegister(response.data);
     } catch (error) {
       console.error("Error registering real estate:", error);

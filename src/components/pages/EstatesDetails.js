@@ -9,7 +9,7 @@ const EstatesDetails = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await api.get(`your-api-url/real-estates/${id}`);
+        const response = await api.get(`/real-estates/${id}`);
         setEstateDetails(response.data);
       } catch (error) {
         console.error("Error fetching estate details:", error);
