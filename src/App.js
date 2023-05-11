@@ -6,6 +6,7 @@ import RealEstates from "./components/pages/RealEstates";
 import EstatesDetails from "./components/pages/EstatesDetails";
 import ContactPage from "./components/pages/ContactPage";
 import LoginPage from "./components/pages/LoginPage";
+import AdminPage from "./components/pages/AdminPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/real-estates/:id" element={<EstatesDetails />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/admin" element={<AdminPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </main>
