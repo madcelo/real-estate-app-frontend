@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import api from "../../api/api";
-import { useNavigate } from "react-router-dom";   
+import { authAPI } from "../../api/api";
+import { useNavigate } from "react-router-dom";
+import "./LoginForm.css";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -12,8 +13,7 @@ const LoginForm = () => {
     e.preventDefault();
 
     try {
-      const response = await api.post("/auth/login", { email, password });
-      const { token } = response.data;
+      const { token } = await authAPI.login({ email, password });
 
       localStorage.setItem("authToken", token);
       navigate("/admin");
@@ -24,28 +24,31 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="login-form-container">
-      {error && <span className="error-message">{error}</span>}
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          minLength="6"
-          required
-        />
-        <button type="submit">Login</button>
-      </form>
+    <div className="login-form">
+      <h1>Login</h1>
+      <div className="login-form-container">
+        {error && <span className="error-message">{error}</span>}
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            minLength="6"
+            required
+          />
+          <button type="submit">Login</button>
+        </form>
+      </div>
     </div>
   );
 };

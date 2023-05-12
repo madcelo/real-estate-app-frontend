@@ -1,12 +1,12 @@
 import React from "react";
 import Banner from "../display/Banner";
-import RealEstatesList from "../lists/RealEstatesList";
+import FeaturedList from "../lists/FeaturedList";
 
 const HomePage = () => {
   return (
     <div>
       <Banner />
-      <RealEstatesList isHomePage={true} />
+      <FeaturedList />
     </div>
   );
 };

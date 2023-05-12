@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./ContactPage.css"
 
 const ContactPage = () => {
   // Define the state for the form fields

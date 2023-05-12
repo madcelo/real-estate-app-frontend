@@ -4,7 +4,7 @@ import RealEstatesList from "../lists/RealEstatesList";
 const RealEstates = () => {
   return (
     <div>
-      <RealEstatesList isHomePage={false} />
+      <RealEstatesList />
     </div>
   );
 };

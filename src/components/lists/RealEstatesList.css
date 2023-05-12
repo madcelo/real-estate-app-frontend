@@ -1,0 +1,10 @@
+.real-estates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.real-estates-list .card-big {
+  margin-bottom: 20px;
+}
