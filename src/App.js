@@ -6,6 +6,8 @@ import RealEstates from "./components/pages/RealEstates";
 import ContactPage from "./components/pages/ContactPage";
 import LoginPage from "./components/pages/LoginPage";
 import RealEstateDetails from "./components/pages/RealEstateDetails";
+import AdminPage from "./components/pages/AdminPage";
+import RequireAuth from "./components/HOCs/RequireAuth";
 
 function App() {
   return (
@@ -17,6 +19,10 @@ function App() {
           <Route path="/real-estates" element={<RealEstates />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route
+            path="/admin"
+            element={<RequireAuth Component={AdminPage} />}
+          />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/real-estates/:id" element={<RealEstateDetails />} />
         </Routes>

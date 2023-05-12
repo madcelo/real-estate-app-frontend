@@ -4,6 +4,17 @@ const api = axios.create({
   baseURL: "http://localhost:5000/api",
 });
 
+api.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem("authToken");
+    if (token) {
+      config.headers["Authorization"] = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
+
 export const realEstateAPI = {
   fetchAll: async () => {
     try {
@@ -38,6 +49,15 @@ export const realEstateAPI = {
       return response.data;
     } catch (error) {
       console.error(`Error deleting real estate with id ${id}:`, error);
+      throw error;
+    }
+  },
+  create: async (newData) => {
+    try {
+      const response = await api.post(`/real-estates`, newData);
+      return response.data;
+    } catch (error) {
+      console.error(`Error creating new real estate:`, error);
       throw error;
     }
   },
