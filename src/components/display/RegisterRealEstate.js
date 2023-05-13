@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import RegisterAndEditForm from "./RegisterAndEditForm";
+import "./RegisterRealEstate.css";
 
 const RegisterRealEstate = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -68,8 +69,10 @@ const RegisterRealEstate = () => {
   };
 
   return (
-    <div>
-      <button onClick={handleOpenModal}>Register a new Real Estate</button>
+    <div className="register-real-estate">
+      <button className="register-real-estate-button" onClick={handleOpenModal}>
+        Register a new Real Estate
+      </button>
       {isModalOpen && (
         <RegisterAndEditForm
           formValues={formValues}

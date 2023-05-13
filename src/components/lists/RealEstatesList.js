@@ -36,13 +36,19 @@ const RealEstatesList = () => {
   return (
     <div className="real-estates-list">
       {currentRealEstates.map((estate) => (
-        <RealEstateCard key={estate._id} estate={estate} cardType="big" />
+        <RealEstateCard
+          key={estate._id}
+          estate={estate}
+          cardType="big"
+          className="real-estates-list-card"
+        />
       ))}
       <Pagination
         totalItems={realEstates.length}
         itemsPerPage={realEstatesPerPage}
         currentPage={currentPage}
         paginate={paginate}
+        className="real-estates-list-pagination"
       />
     </div>
   );

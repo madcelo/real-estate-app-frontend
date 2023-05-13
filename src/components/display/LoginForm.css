@@ -5,10 +5,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--light-grey);
+  color: var(--green);
 }
 
-.login-form h1 {
+.login-form-header {
   color: var(--light-grey);
   margin-bottom: 2em;
 }
@@ -18,6 +18,8 @@
   padding: 2em;
   border-radius: 8px;
   margin-bottom: 2em;
+  width: 100%;
+  max-width: 400px; /* To make it mobile-friendly */
 }
 
 .login-form-container form {
@@ -25,34 +27,73 @@
   flex-direction: column;
 }
 
-.login-form-container label {
+.login-form-label {
   font-weight: bold;
   margin-bottom: 0.5em;
 }
 
-.login-form-container input,
-.login-form-container textarea {
+.login-form-input {
   margin-bottom: 1em;
   padding: 0.5em;
   border-radius: 4px;
-  border: none;
+  border: 1px solid var(--green);
 }
 
-.login-form-container button {
+.login-form-input:focus,
+.form-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--green);
+}
+
+.form-textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--green);
+}
+
+.login-form-button {
   background-color: var(--green);
   color: var(--light-grey);
   border: none;
   padding: 0.5em 1em;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 1em; /* To add some space between the button and the input */
 }
 
-.login-form-container button:hover {
+.login-form-button:hover {
   background-color: var(--dark-green);
   color: var(--light-green);
 }
 
-.error-message {
+.login-form-error {
   color: var(--error);
-  margin-bottom: 10px;
+  margin-bottom: 1em;
+  text-align: center;
+  width: 100%;
+  padding: 1em;
+  border-radius: 4px;
+  background-color: var(--light-grey);
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 600px) {
+  .login-form {
+    padding: 1em;
+  }
+
+  .login-form-container {
+    padding: 1em;
+    max-width: 100%;
+  }
+
+  .login-form-label,
+  .login-form-input,
+  .login-form-button {
+    font-size: 0.9em;
+  }
+
+  .login-form-header {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
 }

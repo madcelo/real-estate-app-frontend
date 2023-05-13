@@ -5,6 +5,10 @@
   margin: 20px 0;
 }
 
-.real-estates-list .card-big {
+.real-estates-list .real-estates-list-card {
   margin-bottom: 20px;
+}
+
+.real-estates-list .real-estates-list-pagination {
+  margin-top: 20px;
 }

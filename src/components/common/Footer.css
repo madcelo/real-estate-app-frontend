@@ -7,13 +7,23 @@
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
 }
 
 .sitemap h4,
 .copyright p {
   margin-bottom: 0.5em;
+}
+
+.sitemap{
+  width: 40%;
+}
+
+.copyright{
+  width: 60%;
 }
 
 .sitemap ul {
@@ -22,6 +32,7 @@
 
 .sitemap ul li a {
   color: var(--light-green);
+  transition: color 0.3s ease;
 }
 
 .sitemap ul li a:hover {
@@ -29,7 +40,8 @@
 }
 
 .copyright a {
-  color: var(--light-green);
+  color: var(--green);
+  transition: color 0.3s ease;
 }
 
 .copyright a:hover {

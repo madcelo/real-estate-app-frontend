@@ -33,17 +33,32 @@ const FeaturedList = () => {
   const isMobile = windowWidth <= 768;
 
   return isMobile ? (
-    <Carousel autoPlay showThumbs={false} infiniteLoop useKeyboardArrows>
+    <Carousel
+      autoPlay
+      showThumbs={false}
+      infiniteLoop
+      useKeyboardArrows
+      className="carousel"
+    >
       {featuredEstates.map((estate) => (
-        <div key={estate._id}>
-          <RealEstateCard estate={estate} cardType="big" />
+        <div key={estate._id} className="carousel-slider-wrapper">
+          <RealEstateCard
+            estate={estate}
+            cardType="big"
+            className="carousel-slide"
+          />
         </div>
       ))}
     </Carousel>
   ) : (
     <div className="featured-list">
       {featuredEstates.map((estate) => (
-        <RealEstateCard key={estate._id} estate={estate} cardType="medium" />
+        <RealEstateCard
+          key={estate._id}
+          estate={estate}
+          cardType="medium"
+          className="featured-list-item"
+        />
       ))}
     </div>
   );

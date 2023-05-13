@@ -56,7 +56,11 @@ const AdminList = () => {
       {realEstates.length > 0 ? (
         realEstates.map((realEstate) => (
           <div key={realEstate._id} className="info">
-            <img src={realEstate.imageUrl[0]} alt={realEstate.title} />
+            <img
+            className="admin-list-img"
+            src={realEstate.imageUrl[0]}
+            alt={realEstate.title}
+            />
             <h3>{realEstate.title}</h3>
             <button onClick={() => handleEdit(realEstate)}>Edit</button>
             <button

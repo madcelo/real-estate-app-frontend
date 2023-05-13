@@ -34,39 +34,47 @@ function RealEstateDetails() {
     bathrooms,
     area,
     address,
-    additionalInfo
+    additionalInfo,
   } = estate;
 
   return (
     <div className="real-estate-details">
-      <h2>{title}</h2>
-      <div className="image-container">
+      <h2 className="real-estate-details__title">{title}</h2>
+      <div className="real-estate-details__images">
         <img
           src={imageUrl[mainImageIndex]}
           alt={title}
-          className="main-image"
+          className="real-estate-details__images__main"
         />
-        <div className="thumbnail-container">
+        <div className="real-estate-details__images__thumbnails">
           {imageUrl.map((url, index) =>
             url ? (
               <img
                 key={index}
                 src={url}
                 alt={title}
-                className="thumbnail"
+                className="real-estate-details__images__thumbnails__item"
                 onClick={() => setMainImageIndex(index)}
               />
             ) : null
           )}
         </div>
       </div>
-      <p>{type}</p>
-      <p>{purpose}</p>
-      <p>{bedrooms}</p>
-      <p>{bathrooms}</p>
-      <p>{area}</p>
-      <p>{address}</p>
-      <p>{additionalInfo}</p>
+      <div className="real-estate-details__details">
+        <p className="real-estate-details__details__description">{type}</p>
+        <p className="real-estate-details__details__description">
+          {purpose}
+        </p>{" "}
+        <p>{bedrooms}</p>I apologize for the interruption. Here's the
+        continuation: jsx
+        <p className="real-estate-details__details__description">{bedrooms}</p>
+        <p className="real-estate-details__details__description">{bathrooms}</p>
+        <p className="real-estate-details__details__description">{area}</p>
+        <p className="real-estate-details__details__description">{address}</p>
+        <p className="real-estate-details__details__description">
+          {additionalInfo}
+        </p>
+      </div>
     </div>
   );
 }

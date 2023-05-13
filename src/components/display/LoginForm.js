@@ -25,20 +25,26 @@ const LoginForm = () => {
 
   return (
     <div className="login-form">
-      <h1>Login</h1>
+      <h1 className="login-form-header">Login</h1>
       <div className="login-form-container">
-        {error && <span className="error-message">{error}</span>}
+        {error && <span className="login-form-error">{error}</span>}
         <form onSubmit={handleSubmit}>
-          <label htmlFor="email">Email</label>
+          <label className="login-form-label" htmlFor="email">
+            Email
+          </label>
           <input
+            className="login-form-input"
             type="email"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <label htmlFor="password">Password</label>
+          <label className="login-form-label" htmlFor="password">
+            Password
+          </label>
           <input
+            className="login-form-input"
             type="password"
             id="password"
             value={password}
@@ -46,7 +52,9 @@ const LoginForm = () => {
             minLength="6"
             required
           />
-          <button type="submit">Login</button>
+          <button className="login-form-button" type="submit">
+            Login
+          </button>
         </form>
       </div>
     </div>

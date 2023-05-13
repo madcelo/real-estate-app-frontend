@@ -17,13 +17,13 @@ const RealEstateCard = ({ estate, cardType }) => {
 
   const mediumCard = (
     <div className="card-medium">
-      <img src={imageUrl[0]} alt={title} />
-      <h2>{title}</h2>
-      <p>{type}</p>
-      <p>{purpose}</p>
+      <img className="card-img" src={imageUrl[0]} alt={title} />
+      <h2 className="card-title">{title}</h2>
+      <p className="card-info">{type}</p>
+      <p className="card-info">{purpose}</p>
       <Link to={`/real-estates/${_id}`} className="details-button">
         View Details
-      </Link>{" "}
+      </Link>
     </div>
   );
 
@@ -31,19 +31,19 @@ const RealEstateCard = ({ estate, cardType }) => {
     <div className="card-big">
       <div className="carousel">
         {imageUrl.map((url, index) => (
-          <img key={index} src={url} alt={title} />
+          <img key={index} className="carousel-img" src={url} alt={title} />
         ))}
       </div>
-      <h2>{title}</h2>
-      <p>{type}</p>
-      <p>{purpose}</p>
-      <p>{bedrooms}</p>
-      <p>{bathrooms}</p>
-      <p>{area}</p>
-      <p>{address}</p>
+      <h2 className="card-title">{title}</h2>
+      <p className="card-info">{type}</p>
+      <p className="card-info">{purpose}</p>
+      <p className="card-info">{bedrooms}</p>
+      <p className="card-info">{bathrooms}</p>
+      <p className="card-info">{area}</p>
+      <p className="card-info">{address}</p>
       <Link to={`/real-estates/${_id}`} className="details-button">
         View Details
-      </Link>{" "}
+      </Link>
     </div>
   );
 

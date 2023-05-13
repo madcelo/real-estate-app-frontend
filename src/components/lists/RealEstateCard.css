@@ -22,26 +22,24 @@
   padding: 2em;
 }
 
-.card-medium:hover{
+.card-medium:hover {
   transform: scale(1.02);
 }
 
-.card-medium img,
-.card-big img {
+.card-medium .card-img,
+.card-big .card-img {
   width: 100%;
   height: 250px;
   object-fit: cover;
 }
 
-.card-medium h2,
-.card-big h2 {
+.card-title {
   margin: 15px;
   font-size: 1.5em;
   color: var(--dark-green);
 }
 
-.card-medium p,
-.card-big p {
+.card-info {
   margin: 0 15px;
   font-size: 1em;
   color: var(--dark-green);
@@ -58,7 +56,7 @@
   display: none; /* Chrome, Safari, Edge */
 }
 
-.card-big .carousel img {
+.card-big .carousel .carousel-img {
   flex: 0 0 auto;
   width: 100%;
   height: 300px;

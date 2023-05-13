@@ -4,11 +4,17 @@ import "./Banner.css";
 
 const Banner = () => {
   return (
-    <div className="banner">
-      <img src={bannerImage} alt="Real Estate Banner" />
-      <div className="banner-content">
-        <h1>Welcome to Real Estate</h1>
-        <p>Find your dream home and explore the finest properties</p>
+    <div className="banner-container">
+      <img
+        className="banner-image"
+        src={bannerImage}
+        alt="Real Estate Banner"
+      />
+      <div className="banner-content-container">
+        <h1 className="banner-heading">Welcome to Real Estate</h1>
+        <p className="banner-text">
+          Find your dream home and explore the finest properties
+        </p>
       </div>
     </div>
   );
