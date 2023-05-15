@@ -65,8 +65,7 @@ function RealEstateDetails() {
         <p className="real-estate-details__details__description">
           {purpose}
         </p>{" "}
-        <p>{bedrooms}</p>I apologize for the interruption. Here's the
-        continuation: jsx
+        <p>{bedrooms}</p>
         <p className="real-estate-details__details__description">{bedrooms}</p>
         <p className="real-estate-details__details__description">{bathrooms}</p>
         <p className="real-estate-details__details__description">{area}</p>

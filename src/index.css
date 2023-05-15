@@ -1,6 +1,4 @@
-/* index.css */
-
-/* STYLE VARIABLES */
+/* GLOBAL STYLE VARIABLES */
 :root {
   --dark-green: #214001;
   --even-darker-green: #102601;
@@ -48,14 +46,30 @@ body {
   padding: 0 20px;
 }
 
-@media screen and (max-width: 1200px) {
+/* GLOBAL MEDIA QUERIES */
+@media (max-width: 900px) {
+  body {
+    font-size: 0.9rem; /* decrease global font-size */
+  }
   .container {
-    padding: 0 15px;
+    max-width: 90%; /* increase container width */
   }
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
+  body {
+    font-size: 0.8rem; /* further decrease global font-size */
+  }
   .container {
-    padding: 0 10px;
+    max-width: 85%; /* further increase container width */
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 0.7rem; /* further decrease global font-size */
+  }
+  .container {
+    max-width: 80%; /* further increase container width */
   }
 }

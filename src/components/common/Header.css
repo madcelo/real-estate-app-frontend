@@ -19,33 +19,131 @@
 .navbar-menu {
   display: flex;
   justify-content: flex-end;
+  margin-top: 2em;
+  width: 100%;
 }
 
 .navbar-item {
   margin-left: 1em;
   color: var(--light-green);
   transition: color 0.3s ease;
+  padding: 0.5em; /* better touch target */
+  text-decoration: none;
 }
 
 .navbar-item:hover {
   color: var(--light-grey);
 }
 
-@media screen and (max-width: 768px) {
-  .navbar {
-    background-color: var(--even-darker-green);
-    padding: 1em 0;
-    position: unset;
-    top: 0;
-    z-index: unset;
-  }
+.navbar-mobile-menu {
+  position: fixed; /* change from absolute to fixed */
+  width: 200px; /* adjust as needed */
+  height: 100%; /* make it full height */
+  top: 0; /* align to the top */
+  right: -200px; /* start off the screen */
+  background-color: var(--even-darker-green);
+  transition: right 0.3s ease; /* animate the right property */
+}
 
-  .navbar-menu {
-    flex-direction: column;
-    align-items: flex-start;
+.navbar-mobile-menu.is-active {
+  display: flex;
+  right: 0; /* when active, slide it onto the screen */
+}
+
+.navbar-mobile-menu.right {
+  right: 0;
+}
+
+.navbar-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  margin-left: auto;
+}
+
+.navbar-burger span {
+  width: 2rem;
+  height: 0.25rem;
+  background: var(--light-green);
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.navbar-burger.is-active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 0.75rem;
+}
+
+.navbar-burger.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-burger.is-active span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: -0.75rem;
+}
+
+.navbar-mobile-menu {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  background-color: var(--even-darker-green);
+  transition: right 0.3s ease;
+}
+
+.navbar-menu.is-active {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3em; /* adjust as needed */
+}
+
+/* Media Queries for the navbar */
+@media (max-width: 900px) {
+  /* add if needed */
+}
+
+@media (max-width: 600px) {
+  /* add if needed */
+}
+
+@media (max-width: 400px) {
+  .navbar-burger {
+    display: flex;
   }
 
   .navbar-item {
-    margin: 0.5em 0;
+    font-size: 1.5rem; /* increase font size for mobile view */
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-menu.is-active {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top: 60%;
+    left: 0; /* IDK why, but this must be here */
+    text-align: right;
+    background-color: var(--even-darker-green);
+  }
+
+  .navbar-mobile-menu {
+    display: none;
+  }
+
+  .navbar-end {
+    display: flex;
+    flex-direction: column;
   }
 }

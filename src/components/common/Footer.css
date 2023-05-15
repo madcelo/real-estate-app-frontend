@@ -18,11 +18,11 @@
   margin-bottom: 0.5em;
 }
 
-.sitemap{
+.sitemap {
   width: 40%;
 }
 
-.copyright{
+.copyright {
   width: 60%;
 }
 
@@ -33,6 +33,7 @@
 .sitemap ul li a {
   color: var(--light-green);
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .sitemap ul li a:hover {
@@ -42,15 +43,16 @@
 .copyright a {
   color: var(--green);
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .copyright a:hover {
   color: var(--light-grey);
 }
 
-@media screen and (max-width: 600px) {
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
+@media (max-width: 900px) {
+  .sitemap,
+  .copyright {
+    width: 100%;
   }
 }

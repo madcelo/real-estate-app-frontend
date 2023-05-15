@@ -103,7 +103,7 @@ const RegisterAndEditForm = ({
               </button>
             </div>
           ))}
-          <button className="button" type="button" onClick={handleAddImageUrl}>
+          <button className="AddIMGbutton" type="button" onClick={handleAddImageUrl}>
             Add Image URL
           </button>
         </label>

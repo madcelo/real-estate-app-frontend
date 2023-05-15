@@ -53,7 +53,7 @@ form {
   margin-bottom: 10px;
 }
 
-.button {
+.AddIMGbutton {
   color: var(--light-grey);
   border: none;
   padding: 0.5em 1em;
@@ -63,7 +63,7 @@ form {
   width: 10em;
 }
 
-.button:active {
+.AddIMGbutton:active {
   transform: scale(0.98);
 }
 
@@ -81,16 +81,4 @@ form {
 
 .save-button:hover {
   background-color: var(--dark-green);
-}
-
-@media screen and (max-width: 600px) {
-  .form {
-    padding: 10px;
-    width: 90%;
-    max-height: 90vh; /* Increase max height for small screens */
-  }
-
-  .button {
-    width: 100%;
-  }
 }

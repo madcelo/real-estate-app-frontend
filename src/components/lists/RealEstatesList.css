@@ -12,3 +12,21 @@
 .real-estates-list .real-estates-list-pagination {
   margin-top: 20px;
 }
+
+@media (max-width: 900px) {
+  .real-estates-list {
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .real-estates-list {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .real-estates-list {
+    margin: 5px 0;
+  }
+}

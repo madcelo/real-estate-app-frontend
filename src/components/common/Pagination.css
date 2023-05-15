@@ -52,3 +52,15 @@
   background-color: var(--green);
   border-color: var(--dark-green);
 }
+
+@media (max-width: 600px) {
+  .pagination-pagination > .pagination-item > .pagination-link {
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .pagination-pagination > .pagination-item > .pagination-link {
+    padding: 8px 12px;
+  }
+}

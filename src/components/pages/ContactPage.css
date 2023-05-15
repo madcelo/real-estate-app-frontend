@@ -64,8 +64,33 @@
   margin-bottom: 1em;
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 900px) {
+  .contact-form-container input,
+  .contact-form-container textarea {
+    padding: 0.4em;
+  }
+  .contact-form-container button {
+    padding: 0.4em 0.8em;
+  }
+}
+
+@media (max-width: 600px) {
   .contact-page {
-    padding: 1em;
+    padding: 0.5em;
+  }
+  .contact-form-container input,
+  .contact-form-container textarea {
+    padding: 0.3em;
+  }
+  .contact-form-container button {
+    padding: 0.3em 0.6em;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-form-container,
+  .contact-info {
+    width: 100%;
+    box-sizing: border-box;
   }
 }

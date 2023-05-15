@@ -2,6 +2,7 @@
 .card-big {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   background-color: var(--light-grey);
   border: 1px solid var(--green);
   border-radius: 15px;
@@ -14,34 +15,43 @@
   width: 100%;
   margin: auto;
   padding: 1em;
+  min-height: 100%;
 }
 
 .card-big {
   width: 80%;
   margin: auto;
   padding: 2em;
+  min-height: 100%;
 }
 
 .card-medium:hover {
   transform: scale(1.02);
 }
 
-.card-medium .card-img,
-.card-big .card-img {
+.card-medium .card-img {
   width: 100%;
-  height: 250px;
+  height: 250px; /* Fixed height for medium card */
+  object-fit: cover;
+}
+
+.card-big .card-img,
+.card-big .carousel .carousel-img {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 350px; /* Fixed height for big card */
   object-fit: cover;
 }
 
 .card-title {
   margin: 15px;
-  font-size: 1.5em;
+  font-size: 2em;
   color: var(--dark-green);
 }
 
 .card-info {
   margin: 0 15px;
-  font-size: 1em;
+  font-size: 1.5em;
   color: var(--dark-green);
   line-height: 1.5;
 }
@@ -56,12 +66,6 @@
   display: none; /* Chrome, Safari, Edge */
 }
 
-.card-big .carousel .carousel-img {
-  flex: 0 0 auto;
-  width: 100%;
-  height: 300px;
-}
-
 .details-button {
   display: inline-block;
   margin: 15px;
@@ -72,6 +76,7 @@
   text-transform: uppercase;
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
 }
 
 .details-button:hover {
@@ -79,19 +84,33 @@
   color: var(--light-green);
 }
 
-@media screen and (min-width: 600px) {
-  .card-medium {
-    flex-basis: calc(50% - 30px);
-    margin-right: 30px;
+@media (max-width: 900px) {
+/* add if needed */
+}
+
+@media (max-width: 600px) {
+  .card-medium,
+  .card-big {
+    width: 95%;
   }
-  .card-medium:nth-child(2n) {
-    margin-right: 0;
+  .card-title {
+    font-size: 1.8em;
+  }
+  .card-info {
+    font-size: 1.2em;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 400px) {
   .card-medium,
   .card-big {
-    flex-basis: 100%;
+    width: 100%;
+    padding: 1em;
+  }
+  .card-title {
+    font-size: 1.8em;
+  }
+  .card-info {
+    font-size: 1.2em;
   }
 }

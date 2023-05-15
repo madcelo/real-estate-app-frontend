@@ -52,7 +52,7 @@ const AdminList = () => {
       <div className="register-container">
         <RegisterRealEstate />
       </div>
-      <h2>Admin Real Estate List</h2>
+      <h2 className="admin-list-h2">Admin Real Estate List</h2>
       {realEstates.length > 0 ? (
         realEstates.map((realEstate) => (
           <div key={realEstate._id} className="info">
@@ -61,8 +61,8 @@ const AdminList = () => {
             src={realEstate.imageUrl[0]}
             alt={realEstate.title}
             />
-            <h3>{realEstate.title}</h3>
-            <button onClick={() => handleEdit(realEstate)}>Edit</button>
+            <h3 className="admin-list-h3">{realEstate.title}</h3>
+            <button className="edit" onClick={() => handleEdit(realEstate)}>Edit</button>
             <button
               className="delete"
               onClick={() => handleDelete(realEstate._id)}
